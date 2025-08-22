@@ -347,7 +347,7 @@ const VideoPlayer = ({ title, onComplete, src }) => {
           </Button>
         ) : (
           <video
-            src={src}         // <-- aqui você coloca o caminho do vídeo
+            src={src}
             controls
             autoPlay
             className="w-full h-full rounded-lg"
@@ -457,40 +457,40 @@ const InteractiveCards = ({ title, onComplete }) => {
   const card = nutritionCards[currentCard]
 
   return (
-<div className="bg-white border border-gray-200 rounded-lg p-6 max-w-lg w-full mx-auto">
-  <div className="text-center mb-4">
-    <Badge variant="outline">
-      {currentCard + 1} / {nutritionCards.length}
-    </Badge>
-  </div>
+    <div className="bg-white border border-gray-200 rounded-lg p-6 max-w-lg w-full mx-auto">
+      <div className="text-center mb-4">
+        <Badge variant="outline">
+          {currentCard + 1} / {nutritionCards.length}
+        </Badge>
+      </div>
 
-  <div className="bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg p-6 mb-4">
-    <h3 className="text-2xl font-bold text-center mb-4 text-purple-800">
-      {card.nutrient}
-    </h3>
+      <div className="bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg p-6 mb-4">
+        <h3 className="text-2xl font-bold text-center mb-4 text-purple-800">
+          {card.nutrient}
+        </h3>
 
-    <div className="flex justify-center">
-      <img
-        src={card.image}
-        alt={card.nutrient}
-        className="w-full max-w-md h-auto object-contain rounded-lg shadow"
-      />
-    </div>
+        <div className="flex justify-center">
+          <img
+            src={card.image}
+            alt={card.nutrient}
+            className="w-full max-w-md h-auto object-contain rounded-lg shadow"
+          />
+        </div>
 
-    <div className="mt-4 flex justify-center">
-      <Button
-        onClick={() => handleDownload(card.image, card.nutrient)}
-        className="bg-blue-600 hover:bg-blue-700"
-      >
-        Baixar Card
+        <div className="mt-4 flex justify-center">
+          <Button
+            onClick={() => handleDownload(card.image, card.nutrient)}
+            className="bg-blue-600 hover:bg-blue-700"
+          >
+            Baixar Card
+          </Button>
+        </div>
+      </div>
+
+      <Button onClick={handleNext} className="w-full">
+        {currentCard < nutritionCards.length - 1 ? "Próximo Card" : "Finalizar"}
       </Button>
     </div>
-  </div>
-
-  <Button onClick={handleNext} className="w-full">
-    {currentCard < nutritionCards.length - 1 ? "Próximo Card" : "Finalizar"}
-  </Button>
-</div>
 
   )
 }
@@ -904,63 +904,63 @@ export default function LearningPathPage() {
         id: 1,
         title: "O que não fazer na alimentação com uma criança autista seletiva?",
         description: "O que não fazer na alimentação com uma criança autista seletiva?",
-        src: 'https://docs.google.com/videos/d/1zsDmWToYWGk82M9dFPF5iLDRSrp_niJLMR6x7DKUlaQ/edit?usp=sharing',
+        src: "https://drive.google.com/file/d/1zsDmWToYWGk82M9dFPF5iLDRSrp_niJLMR6x7DKUlaQ/preview",
         duration: "3:16",
       },
       {
         id: 2,
         title: "Como introduzir novos alimentos em crianças seletivas com autismo?",
         description: "Como introduzir novos alimentos em crianças seletivas com autismo?",
-        src: 'https://docs.google.com/videos/d/1BoHd049D3afskZmYYiEl251gS6C2cPpke_e-pajSxr0/edit?usp=sharing',
+        src: "https://drive.google.com/file/d/1BoHd049D3afskZmYYiEl251gS6C2cPpke_e-pajSxr0/preview",
         duration: "3:02",
       },
       {
         id: 3,
         title: "Quais são os característicos da seletividade alimentar?",
         description: "Quais são os característicos da seletividade alimentar?",
-        src: 'https://docs.google.com/videos/d/1b9AiOxRmezSTmJzz0bGpRPCvgPmI-EC6dDD2uN34nik/edit?usp=sharing',
+        src: "https://drive.google.com/file/d/1b9AiOxRmezSTmJzz0bGpRPCvgPmI-EC6dDD2uN34nik/preview",
         duration: "0:59",
       },
       {
         id: 4,
         title: "Como organizar a rotina alimentar da criança autista seletiva?",
         description: "Como organizar a rotina alimentar da criança autista seletiva?",
-        src: "https://docs.google.com/videos/d/1nCv-lPXWSGsUTLy-JFELyDQLlMDYKCtmIpgQlMYFU5E/edit?usp=sharing",
+        src: "https://drive.google.com/file/d/1nCv-lPXWSGsUTLy-JFELyDQLlMDYKCtmIpgQlMYFU5E/preview",
         duration: "3:13",
       },
       {
         id: 5,
         title: "Impactos da seletividade alimentar",
         description: "Impactos da seletividade alimentar",
-        src: 'https://docs.google.com/videos/d/1w2OD84P7bGpQ3iw9p4uZXO9jZe4TLdyzutGQMPOe3Zk/edit?usp=sharing',
+        src: "https://drive.google.com/file/d/1w2OD84P7bGpQ3iw9p4uZXO9jZe4TLdyzutGQMPOe3Zk/preview",
         duration: "1:55",
       },
       {
         id: 6,
         title: "Recursos Disponíveis",
         description: "Materiais, quizzes e atividades práticas",
-        src: 'https://docs.google.com/videos/d/1phxzbbi05WAru5UuyJSAy-BvikMLdTEO1fH2r8xDZMY/edit?usp=sharing',
+        src: "https://drive.google.com/file/d/1phxzbbi05WAru5UuyJSAy-BvikMLdTEO1fH2r8xDZMY/preview",
         duration: "5:15",
       },
       {
         id: 7,
         title: "Por que envolver a criança nas escolhas e preparo?",
         description: "Por que envolver a criança nas escolhas e preparo?",
-        src: 'https://docs.google.com/videos/d/121Rs7E-PefkOsbHvJjg7lAlJrcOLTWIxaM3XShweqrY/edit?usp=sharing',
+        src: "https://drive.google.com/file/d/121Rs7E-PefkOsbHvJjg7lAlJrcOLTWIxaM3XShweqrY/preview",
         duration: "2:54",
       },
       {
         id: 8,
         title: "Como identificar se uma criança é autista seletiva na alimentação?",
         description: "Como identificar se uma criança é autista seletiva na alimentação?",
-        src: 'https://docs.google.com/videos/d/1lkKJKerTArymOVP7wctMhsXeAvwGn4T3mciJQUh8gho/edit?usp=sharing',
+        src: "https://drive.google.com/file/d/1lkKJKerTArymOVP7wctMhsXeAvwGn4T3mciJQUh8gho/preview",
         duration: "2:54",
       },
       {
         id: 9,
         title: "Por que a seletividade alimentar acontece com frequência em crianças autistas?",
         description: "Por que a seletividade alimentar acontece com frequência em crianças autistas?",
-        src: 'https://docs.google.com/videos/d/1Fgs5YlmSXB-WHZm2sIxMb_O3mkQIcu5g8JDnsS-FhLQ/edit?usp=sharing',
+        src: "https://drive.google.com/file/d/1Fgs5YlmSXB-WHZm2sIxMb_O3mkQIcu5g8JDnsS-FhLQ/preview",
         duration: "1:28",
       },
     ]
@@ -1097,21 +1097,42 @@ export default function LearningPathPage() {
             <div
               key={video.id}
               onClick={() => goToVideo(index)}
-              className={`cursor-pointer rounded-lg border-2 p-3 transition-all ${index === currentVideo ? "border-blue-500 bg-blue-50" : "border-gray-200 hover:border-gray-300"
+              className={`cursor-pointer rounded-lg border-2 p-3 transition-all ${index === currentVideo
+                ? "border-blue-500 bg-blue-50"
+                : "border-gray-200 hover:border-gray-300"
                 }`}
             >
-              <div className="aspect-video bg-gray-100 rounded mb-2 flex items-center justify-center relative">
-                <Play className="h-6 w-6 text-gray-400" />
+              <div className="aspect-video w-full bg-gray-100 rounded mb-2 relative">
+                {/* Iframe responsivo */}
+                <iframe
+                  src={video.src} // URL do Vimeo ou outro embed
+                  title={video.title}
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full rounded"
+                ></iframe>
+
+                {/* Ícone de play só se quiser sobrepor */}
+                {index !== currentVideo && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Play className="h-6 w-6 text-gray-400" />
+                  </div>
+                )}
+
+                {/* Marca de vídeo completo */}
                 {completedVideos.has(video.id) && (
                   <div className="absolute top-1 right-1">
                     <CheckCircle className="h-4 w-4 text-green-600" />
                   </div>
                 )}
               </div>
-              <h5 className="font-medium text-xs mb-1 line-clamp-2">{video.title}</h5>
+
+              <h5 className="font-medium text-sm mb-1 line-clamp-2">{video.title}</h5>
               <p className="text-xs text-gray-500">{video.duration}</p>
             </div>
           ))}
+
         </div>
 
         {/* Completion Status */}
