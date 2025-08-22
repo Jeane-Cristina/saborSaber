@@ -388,6 +388,7 @@ export default function TrilhaAprendizagem() {
             title="Meu vídeo do Vimeo"
             src="https://drive.google.com/file/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/preview" controls className="video-apresentacao" />
           <img src={quadrinho} alt="Imagem de apoio" className="imagem-apresentacao" />
+
         </div>
 
         <div className="secao-videos">
