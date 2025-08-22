@@ -380,7 +380,7 @@ export default function TrilhaAprendizagem() {
         </div>
 
         <div className="secao-apresentacao">
-          <video src="https://docs.google.com/videos/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/edit?usp=sharing" controls className="video-apresentacao" />
+          <video src="https://drive.google.com/uc?export=download&id=1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU" controls className="video-apresentacao" />
           <img src={quadrinho} alt="Imagem de apoio" className="imagem-apresentacao" />
         </div>
 
