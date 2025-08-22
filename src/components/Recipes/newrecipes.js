@@ -1594,15 +1594,16 @@ export default function LearningPathPage() {
                     return (
                       <div key={activity.id} className="space-y-3">
                         <div
-                          className={`flex items-center justify-between p-3 rounded-lg border ${activity.completed
-                            ? "bg-green-100 border-green-300"
-                            : currentViewingLevel.unlocked
-                              ? "bg-white border-gray-200 hover:border-blue-300"
-                              : "bg-gray-100 border-gray-200"
+                          className={`activity-box 
+                            ${activity.completed
+                              ? "completed"
+                              : currentViewingLevel.unlocked
+                                ? "unlocked"
+                                : "locked"
                             }`}
                         >
                           <div className="flex items-center gap-3">
-                            {getIcon(activity.iconType, activity.completed ? "text-green-600" : "text-gray-600")}
+                            {/* {getIcon(activity.iconType, activity.completed ? "text-green-600" : "text-gray-600")} */}
                             <div>
                               <h4 className="font-medium text-gray-800">{activity.name}</h4>
                               <p className="text-sm text-gray-600">{activity.points} pontos</p>
@@ -1611,30 +1612,31 @@ export default function LearningPathPage() {
 
                           <div className="flex items-center gap-2">
                             {activity.completed && <CheckCircle className="h-5 w-5 text-green-600" />}
-                            {currentViewingLevel.unlocked && (
-                              <Button
-                                size="sm"
-                                variant={activeActivity === activity.id ? "secondary" : "outline"}
-                                onClick={() =>
-                                  setActiveActivity(activeActivity === activity.id ? null : activity.id)
-                                }
-                                className={`
-                                  px-4 py-2 rounded-xl font-medium transition-all duration-300
+                            <Button
+                              size="sm"
+                              onClick={() =>
+                                setActiveActivity(activeActivity === activity.id ? null : activity.id)
+                              }
+                              className={`
+                                  inline-flex items-center justify-center
+                                  px-5 py-2 rounded-lg text-sm font-semibold
+                                  transition-all duration-300 shadow-sm
+                                  focus:outline-none focus:ring-2 focus:ring-offset-1
                                   ${activeActivity === activity.id
-                                    ? "bg-gray-800 text-white hover:bg-gray-700 shadow-md"
-                                    : activity.completed
-                                      ? "border-green-500 text-green-600 hover:bg-green-50 hover:border-green-600"
-                                      : "border-blue-500 text-blue-600 hover:bg-blue-50 hover:border-blue-600"}
-                              `}
-                              >
-                                {activeActivity === activity.id
-                                  ? "Fechar"
+                                  ? "bg-gray-800 text-white hover:bg-gray-700 focus:ring-gray-500"
                                   : activity.completed
-                                    ? "Refazer"
-                                    : "Iniciar"}
-                              </Button>
+                                    ? "bg-white text-green-600 border border-green-500 hover:bg-green-50 hover:border-green-600 focus:ring-green-500"
+                                    : "bg-white text-blue-600 border border-blue-500 hover:bg-blue-50 hover:border-blue-600 focus:ring-blue-500"
+                                }
+                            `}
+                            >
+                              {activeActivity === activity.id
+                                ? "Fechar"
+                                : activity.completed
+                                  ? "Refazer"
+                                  : "Iniciar"}
+                            </Button>
 
-                            )}
                           </div>
                         </div>
 
