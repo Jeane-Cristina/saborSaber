@@ -1022,49 +1022,48 @@ export default function LearningPathPage() {
         </div>
 
         {/* Video Player */}
-        <div className="mb-6">
-          <div className="aspect-video bg-gray-900 rounded-lg flex items-center justify-center mb-4 relative overflow-hidden">
-            {!isPlaying ? (
-              <div className="text-center text-white">
-                <Button onClick={() => setIsPlaying(true)} size="lg" className="bg-red-600 hover:bg-red-700 mb-4">
-                  <Play className="h-6 w-6 mr-2" />
-                  Reproduzir Vídeo
-                </Button>
-                <div className="text-sm opacity-75">Duração: {currentVideoData.duration}</div>
-              </div>
-            ) : (
-              <iframe
-                src={currentVideoData.src} // URL do Google Drive no formato /preview
-                title={currentVideoData.title}
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full rounded-lg"
-                onLoad={() => console.log("Iframe carregado")} // Não existe onEnded nativo para iframe
-              ></iframe>
+<div className="mb-6">
+  <div className="aspect-video bg-gray-900 rounded-lg flex items-center justify-center mb-4 relative overflow-hidden">
+    {!isPlaying ? (
+      <div className="text-center text-white">
+        <Button onClick={() => setIsPlaying(true)} size="lg" className="bg-red-600 hover:bg-red-700 mb-4">
+          <Play className="h-6 w-6 mr-2" />
+          Reproduzir Vídeo
+        </Button>
+        <div className="text-sm opacity-75">Duração: {currentVideoData.duration}</div>
+      </div>
+    ) : (
+      <iframe
+        src={currentVideoData.src} // URL do Google Drive no formato /preview
+        title={currentVideoData.title}
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowFullScreen
+        className="absolute top-0 left-0 w-full h-full" // ⚡ ocupa toda a div pai
+      ></iframe>
+    )}
+  </div>
 
-            )}
-          </div>
+  {/* Video Info */}
+  <div className="mb-4">
+    <h4 className="font-semibold text-lg mb-1">{currentVideoData.title}</h4>
+    <p className="text-gray-600 text-sm">{currentVideoData.description}</p>
+  </div>
 
-          {/* Video Info */}
-          <div className="mb-4">
-            <h4 className="font-semibold text-lg mb-1">{currentVideoData.title}</h4>
-            <p className="text-gray-600 text-sm">{currentVideoData.description}</p>
-          </div>
+  {/* Progress Indicator */}
+  <div className="flex items-center gap-2 mb-4">
+    <span className="text-sm text-gray-500">Progresso:</span>
+    <div className="flex-1 bg-gray-200 rounded-full h-2">
+      <div
+        className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+        style={{ width: `${(completedVideos.size / videos.length) * 100}%` }}
+      />
+    </div>
+    <span className="text-sm font-medium text-gray-700">
+      {completedVideos.size}/{videos.length}
+    </span>
+  </div>
+</div>
 
-          {/* Progress Indicator */}
-          <div className="flex items-center gap-2 mb-4">
-            <span className="text-sm text-gray-500">Progresso:</span>
-            <div className="flex-1 bg-gray-200 rounded-full h-2">
-              <div
-                className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-                style={{ width: `${(completedVideos.size / videos.length) * 100}%` }}
-              />
-            </div>
-            <span className="text-sm font-medium text-gray-700">
-              {completedVideos.size}/{videos.length}
-            </span>
-          </div>
-        </div>
 
         {/* Navigation Controls */}
         <div className="flex items-center justify-between mb-6">
