@@ -45,9 +45,9 @@ export default function TrilhaAprendizagem() {
   ]
 
   const videos = [
-    { titulo: "Frutas Coloridas 🌈", url: 'https://docs.google.com/videos/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/edit?usp=sharing' },
-    { titulo: "Vegetais Saudáveis 🥬", url: 'https://docs.google.com/videos/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/edit?usp=sharing' },
-    { titulo: "Alimentação Divertida 🎉", url: 'https://docs.google.com/videos/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/edit?usp=sharing' },
+    { titulo: "Frutas Coloridas 🌈", url: 'https://drive.google.com/file/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/preview' },
+    { titulo: "Vegetais Saudáveis 🥬", url: 'https://drive.google.com/file/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/preview' },
+    { titulo: "Alimentação Divertida 🎉", url: 'https://drive.google.com/file/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/preview' },
   ]
 
   useEffect(() => {

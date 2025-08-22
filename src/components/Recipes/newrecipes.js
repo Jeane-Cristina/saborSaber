@@ -87,7 +87,7 @@ const initialLevels = [
         points: 30,
         completed: false,
         iconType: "play",
-        src: 'https://docs.google.com/videos/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/edit?usp=sharing',
+        src: 'https://drive.google.com/file/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/preview',
       },
       {
         id: "0-2",
@@ -115,7 +115,7 @@ const initialLevels = [
         points: 40,
         completed: false,
         iconType: "play",
-        src: 'https://docs.google.com/videos/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/edit?usp=sharing',
+        src: 'https://drive.google.com/file/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/preview',
       },
       {
         id: "1-2",
