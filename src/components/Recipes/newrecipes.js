@@ -1033,13 +1033,15 @@ export default function LearningPathPage() {
                 <div className="text-sm opacity-75">Duração: {currentVideoData.duration}</div>
               </div>
             ) : (
-              <video
-                src={currentVideoData.src}
-                controls
-                autoPlay
+              <iframe
+                src={currentVideoData.src} // URL do Google Drive no formato /preview
+                title={currentVideoData.title}
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
                 className="w-full h-full rounded-lg"
-                onEnded={() => handleVideoComplete(currentVideoData.id)}
-              />
+                onLoad={() => console.log("Iframe carregado")} // Não existe onEnded nativo para iframe
+              ></iframe>
+
             )}
           </div>
 
