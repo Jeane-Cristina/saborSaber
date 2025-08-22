@@ -380,7 +380,13 @@ export default function TrilhaAprendizagem() {
         </div>
 
         <div className="secao-apresentacao">
-          <video src="https://drive.google.com/uc?export=download&id=1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU" controls className="video-apresentacao" />
+          <iframe
+            width="640"
+            height="360"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            title="Meu vídeo do Vimeo"
+            src="https://drive.google.com/file/d/1zsDmWToYWGk82M9dFPF5iLDRSrp_niJLMR6x7DKUlaQ/preview" controls className="video-apresentacao" />
           <img src={quadrinho} alt="Imagem de apoio" className="imagem-apresentacao" />
         </div>
 
