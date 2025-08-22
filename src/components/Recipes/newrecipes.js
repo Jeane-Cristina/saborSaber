@@ -346,11 +346,15 @@ const VideoPlayer = ({ title, onComplete, src }) => {
             Reproduzir Vídeo
           </Button>
         ) : (
-          <video
+          <iframe
+            title={'teste'}
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            style={{ width: '100%', height: '100%' }}
+            className="absolute top-0 left-0 w-full h-full"
             src={src}
             controls
             autoPlay
-            className="w-full h-full rounded-lg"
             onEnded={handleEnded}
             onTimeUpdate={(e) => {
               const current = e.target.currentTime
@@ -1034,11 +1038,12 @@ export default function LearningPathPage() {
               </div>
             ) : (
               <iframe
-                src={currentVideoData.src} // URL do Google Drive no formato /preview
+                src={currentVideoData.src}
                 title={currentVideoData.title}
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
-                className="absolute top-0 left-0 w-full h-full" // ⚡ ocupa toda a div pai
+                style={{ width: '100%', height: '100%' }}
+                className="absolute top-0 left-0 w-full h-full"
               ></iframe>
             )}
           </div>
@@ -1098,45 +1103,13 @@ export default function LearningPathPage() {
             <div
               key={video.id}
               onClick={() => goToVideo(index)}
-              className={`cursor-pointer rounded-lg border-2 p-3 transition-all ${index === currentVideo
-                ? "border-blue-500 bg-blue-50"
-                : "border-gray-200 hover:border-gray-300"
+              className={`cursor-pointer rounded-lg border-2 p-3 transition-all ${index === currentVideo ? "border-blue-500 bg-blue-50" : "border-gray-200 hover:border-gray-300"
                 }`}
             >
               <div className="aspect-video w-full bg-gray-100 rounded mb-2 relative">
-                {/* Iframe responsivo */}
-                <iframe
-                  src={video.src} // URL do Vimeo ou outro embed
-                  title={video.title}
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                  className="absolute top-0 left-0 w-full h-full rounded"
-                ></iframe>
-                <div className="aspect-video w-full bg-gray-100 rounded mb-2 relative">
-                  {index === currentVideo ? (
-                    <iframe
-                      src={video.src}
-                      title={video.title}
-                      frameBorder="0"
-                      allow="autoplay; fullscreen; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full rounded"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center bg-gray-100 rounded cursor-pointer" onClick={() => goToVideo(index)}>
-                      <Play className="h-6 w-6 text-gray-400" />
-                    </div>
-                  )}
-
-                  {completedVideos.has(video.id) && (
-                    <div className="absolute top-1 right-1">
-                      <CheckCircle className="h-4 w-4 text-green-600" />
-                    </div>
-                  )}
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-100 rounded cursor-pointer">
+                  <Play className="h-6 w-6 text-gray-400" />
                 </div>
-
-
-                {/* Marca de vídeo completo */}
                 {completedVideos.has(video.id) && (
                   <div className="absolute top-1 right-1">
                     <CheckCircle className="h-4 w-4 text-green-600" />
@@ -1147,6 +1120,7 @@ export default function LearningPathPage() {
               <h5 className="font-medium text-sm mb-1 line-clamp-2">{video.title}</h5>
               <p className="text-xs text-gray-500">{video.duration}</p>
             </div>
+
           ))}
 
         </div>
