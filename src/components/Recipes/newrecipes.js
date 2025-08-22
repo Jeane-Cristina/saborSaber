@@ -1,56 +1,58 @@
+"use client"
+
 import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./card"
 import { Button } from "./button"
 import { Progress } from "./progess"
 import { Badge } from "./badge"
-import { Link } from "react-router-dom";
-import estica from '../../assets/imgestica.jpg'
-import img2 from '../../assets/4990109033214094757 (1).jpg'
-import img3 from '../../assets/4990109033214094757.jpg'
-import img4 from '../../assets/4990109033214094758.jpg'
-import img5 from '../../assets/4990109033214094759.jpg'
-import img6 from '../../assets/4990109033214094760.jpg'
-import img7 from '../../assets/4990109033214094761.jpg'
-import img8 from '../../assets/4990109033214094762.jpg'
-import img9 from '../../assets/4990109033214094763.jpg'
-import img10 from '../../assets/4990109033214094764.jpg'
-import img11 from '../../assets/4990109033214094765.jpg'
-import img12 from '../../assets/4990109033214094766.jpg'
-import img13 from '../../assets/4990109033214094767.jpg'
-import img14 from '../../assets/4990109033214094768.jpg'
-import img15 from '../../assets/4990109033214094769.jpg'
-import img16 from '../../assets/4990109033214094769.jpg'
-import img17 from '../../assets/4990109033214094770.jpg'
-import img18 from '../../assets/4990109033214094771.jpg'
-import img19 from '../../assets/4990109033214094772.jpg'
-import img20 from '../../assets/4990109033214094773.jpg'
-import img21 from '../../assets/4990109033214094773.jpg'
-import img22 from '../../assets/4990109033214094774.jpg'
-import img23 from '../../assets/4990109033214094775.jpg'
-import img24 from '../../assets/4990109033214094776.jpg'
-import img25 from '../../assets/4990109033214094776.jpg'
-import img26 from '../../assets/4990109033214094777.jpg'
-import img27 from '../../assets/4990109033214094778.jpg'
-import img28 from '../../assets/4990109033214094779.jpg'
-import img29 from '../../assets/4990109033214094780.jpg'
-import img30 from '../../assets/4990109033214094781.jpg'
-import img31 from '../../assets/4990109033214094782.jpg'
-import img32 from '../../assets/4990109033214094783.jpg'
-import img33 from '../../assets/4990109033214094784.jpg'
-import d1 from '../../assets/4990109033214094784.jpg'
-import d2 from '../../assets/4990109033214094784.jpg'
-import d3 from '../../assets/4990109033214094784.jpg'
-import c1 from '../../assets/4990109033214094830.jpg'
-import c2 from '../../assets/4990109033214094831.jpg'
-import c3 from '../../assets/4990109033214094832.jpg'
-import c4 from '../../assets/4990109033214094833.jpg'
-import c5 from '../../assets/4990109033214094834.jpg'
-import c6 from '../../assets/4990109033214094835.jpg'
-import c7 from '../../assets/4990109033214094836.jpg'
-import c8 from '../../assets/4990109033214094837.jpg'
-import c9 from '../../assets/4990109033214094838.jpg'
-import c10 from '../../assets/4990109033214094839.jpg'
-import c11 from '../../assets/4990109033214094840.jpg'
+import { Link } from "react-router-dom"
+import estica from "../../assets/imgestica.jpg"
+import img2 from "../../assets/4990109033214094757 (1).jpg"
+import img3 from "../../assets/4990109033214094757.jpg"
+import img4 from "../../assets/4990109033214094758.jpg"
+import img5 from "../../assets/4990109033214094759.jpg"
+import img6 from "../../assets/4990109033214094760.jpg"
+import img7 from "../../assets/4990109033214094761.jpg"
+import img8 from "../../assets/4990109033214094762.jpg"
+import img9 from "../../assets/4990109033214094763.jpg"
+import img10 from "../../assets/4990109033214094764.jpg"
+import img11 from "../../assets/4990109033214094765.jpg"
+import img12 from "../../assets/4990109033214094766.jpg"
+import img13 from "../../assets/4990109033214094767.jpg"
+import img14 from "../../assets/4990109033214094768.jpg"
+import img15 from "../../assets/4990109033214094769.jpg"
+import img16 from "../../assets/4990109033214094769.jpg"
+import img17 from "../../assets/4990109033214094770.jpg"
+import img18 from "../../assets/4990109033214094771.jpg"
+import img19 from "../../assets/4990109033214094772.jpg"
+import img20 from "../../assets/4990109033214094773.jpg"
+import img21 from "../../assets/4990109033214094773.jpg"
+import img22 from "../../assets/4990109033214094774.jpg"
+import img23 from "../../assets/4990109033214094775.jpg"
+import img24 from "../../assets/4990109033214094776.jpg"
+import img25 from "../../assets/4990109033214094776.jpg"
+import img26 from "../../assets/4990109033214094777.jpg"
+import img27 from "../../assets/4990109033214094778.jpg"
+import img28 from "../../assets/4990109033214094779.jpg"
+import img29 from "../../assets/4990109033214094780.jpg"
+import img30 from "../../assets/4990109033214094781.jpg"
+import img31 from "../../assets/4990109033214094782.jpg"
+import img32 from "../../assets/4990109033214094783.jpg"
+import img33 from "../../assets/4990109033214094784.jpg"
+import d1 from "../../assets/4990109033214094784.jpg"
+import d2 from "../../assets/4990109033214094784.jpg"
+import d3 from "../../assets/4990109033214094784.jpg"
+import c1 from "../../assets/4990109033214094830.jpg"
+import c2 from "../../assets/4990109033214094831.jpg"
+import c3 from "../../assets/4990109033214094832.jpg"
+import c4 from "../../assets/4990109033214094833.jpg"
+import c5 from "../../assets/4990109033214094834.jpg"
+import c6 from "../../assets/4990109033214094835.jpg"
+import c7 from "../../assets/4990109033214094836.jpg"
+import c8 from "../../assets/4990109033214094837.jpg"
+import c9 from "../../assets/4990109033214094838.jpg"
+import c10 from "../../assets/4990109033214094839.jpg"
+import c11 from "../../assets/4990109033214094840.jpg"
 
 import {
   Trophy,
@@ -67,8 +69,11 @@ import {
   Award,
   Sparkles,
   RefreshCw,
+  HelpCircle,
+  XCircle,
+  RotateCcw,
 } from "lucide-react"
-import './newrecipes.css'
+import "./newrecipes.css"
 
 const initialLevels = [
   {
@@ -87,7 +92,7 @@ const initialLevels = [
         points: 30,
         completed: false,
         iconType: "play",
-        src: 'https://docs.google.com/videos/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/edit?usp=sharing',
+        src: "https://docs.google.com/videos/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/edit?usp=sharing",
       },
       {
         id: "0-2",
@@ -115,7 +120,7 @@ const initialLevels = [
         points: 40,
         completed: false,
         iconType: "play",
-        src: 'https://docs.google.com/videos/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/edit?usp=sharing',
+        src: "https://docs.google.com/videos/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/edit?usp=sharing",
       },
       {
         id: "1-2",
@@ -271,7 +276,6 @@ const LevelCertificate = ({ level, onClose }) => {
     // monta o path do certificado pelo ID ou nome
     const certificatePath = `../../assets/1png`
 
-
     const link = document.createElement("a")
     link.href = certificatePath
     link.download = certificatePath
@@ -313,7 +317,6 @@ const EncouragementMessage = ({ message, onClose }) => {
     return () => clearTimeout(timer)
   }, [onClose])
 
-
   return (
     <div className="fixed top-4 right-4 bg-green-500 text-white p-4 rounded-lg shadow-lg z-40 animate-bounce">
       <div className="flex items-center gap-2">
@@ -337,11 +340,7 @@ const VideoPlayer = ({ title, onComplete, src }) => {
     <div className="bg-gray-900 rounded-lg p-6 text-white">
       <div className="aspect-video bg-black rounded-lg flex items-center justify-center mb-4 relative overflow-hidden">
         {!isPlaying ? (
-          <Button
-            onClick={() => setIsPlaying(true)}
-            size="lg"
-            className="bg-red-600 hover:bg-red-700"
-          >
+          <Button onClick={() => setIsPlaying(true)} size="lg" className="bg-red-600 hover:bg-red-700">
             <Play className="h-6 w-6 mr-2" />
             Reproduzir Vídeo
           </Button>
@@ -363,9 +362,7 @@ const VideoPlayer = ({ title, onComplete, src }) => {
 
       <h3 className="text-lg font-semibold mb-2">{title}</h3>
 
-      {isPlaying && (
-        <Progress value={progress} className="w-full mb-3" />
-      )}
+      {isPlaying && <Progress value={progress} className="w-full mb-3" />}
 
       {progress === 100 && (
         <Button onClick={onComplete} className="w-full">
@@ -421,7 +418,6 @@ const InteractiveCards = ({ title, onComplete }) => {
     { nutrient: "Fontes de Nutrientes Magnésio", image: c9 },
     { nutrient: "Fontes de Nutrientes Cálcio", image: c10 },
     { nutrient: "Fontes de Nutrientes Biotina e B5", image: c11 },
-
   ]
 
   const handleNext = () => {
@@ -444,9 +440,7 @@ const InteractiveCards = ({ title, onComplete }) => {
       <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
         <CheckCircle className="h-12 w-12 text-green-600 mx-auto mb-4" />
         <h3 className="text-xl font-semibold mb-2">Cards Concluídos!</h3>
-        <p className="text-gray-600 mb-4">
-          Você explorou todos os nutrientes importantes!
-        </p>
+        <p className="text-gray-600 mb-4">Você explorou todos os nutrientes importantes!</p>
         <Button onClick={onComplete} className="bg-green-600 hover:bg-green-700">
           Finalizar Atividade
         </Button>
@@ -465,23 +459,18 @@ const InteractiveCards = ({ title, onComplete }) => {
       </div>
 
       <div className="bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg p-6 mb-4">
-        <h3 className="text-2xl font-bold text-center mb-4 text-purple-800">
-          {card.nutrient}
-        </h3>
+        <h3 className="text-2xl font-bold text-center mb-4 text-purple-800">{card.nutrient}</h3>
 
         <div className="flex justify-center">
           <img
-            src={card.image}
+            src={card.image || "/placeholder.svg"}
             alt={card.nutrient}
             className="w-full max-w-md h-auto object-contain rounded-lg shadow"
           />
         </div>
 
         <div className="mt-4 flex justify-center">
-          <Button
-            onClick={() => handleDownload(card.image, card.nutrient)}
-            className="bg-blue-600 hover:bg-blue-700"
-          >
+          <Button onClick={() => handleDownload(card.image, card.nutrient)} className="bg-blue-600 hover:bg-blue-700">
             Baixar Card
           </Button>
         </div>
@@ -491,10 +480,8 @@ const InteractiveCards = ({ title, onComplete }) => {
         {currentCard < nutritionCards.length - 1 ? "Próximo Card" : "Finalizar"}
       </Button>
     </div>
-
   )
 }
-
 
 const QuizComponent = ({ title, onComplete }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -693,32 +680,110 @@ const QuizComponent = ({ title, onComplete }) => {
   }
 
   return (
-    <div className="bg-white border border-gray-200 rounded-lg p-6">
-      <div className="mb-4">
-        <div className="flex justify-between items-center mb-2">
-          <h3 className="font-semibold">{title}</h3>
-          <Badge variant="outline">
-            {currentQuestion + 1} / {questions.length}
-          </Badge>
-        </div>
-        <Progress value={((currentQuestion + 1) / questions.length) * 100} />
-      </div>
+    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 sm:p-6">
+      <h3 className="text-lg sm:text-xl font-semibold mb-4 flex items-center gap-2">
+        <HelpCircle className="h-6 w-6 sm:h-5 sm:w-5 text-blue-600" />
+        {title}
+      </h3>
 
-      <div className="mb-6">
-        <h4 className="text-lg font-medium mb-4">{questions[currentQuestion].question}</h4>
-        <div className="space-y-2">
-          {questions[currentQuestion].options.map((option, index) => (
-            <Button
-              key={index}
-              variant="outline"
-              className="w-full text-left justify-start h-auto p-4 bg-transparent hover:bg-blue-50 resposta"
-              onClick={() => handleAnswer(index)}
-            >
-              {option}
-            </Button>
-          ))}
+      {!showResults ? (
+        <div className="space-y-4 sm:space-y-6">
+          <div className="bg-white rounded-lg p-4 sm:p-6">
+            <div className="flex justify-between items-center mb-4">
+              <span className="text-base sm:text-sm font-medium text-gray-600">
+                Pergunta {currentQuestion + 1} de {questions.length}
+              </span>
+              <div className="w-24 sm:w-32 bg-gray-200 rounded-full h-2">
+                <div
+                  className="bg-blue-500 h-2 rounded-full transition-all duration-300"
+                  style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
+                ></div>
+              </div>
+            </div>
+
+            <h4 className="text-lg sm:text-base font-semibold mb-4 sm:mb-6 text-gray-800">
+              {questions[currentQuestion].question}
+            </h4>
+
+            <div className="space-y-3">
+              {questions[currentQuestion].options.map((option, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleAnswer(index)}
+                  className="w-full text-left p-4 sm:p-3 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all text-base sm:text-sm"
+                >
+                  <span className="font-medium mr-3">{String.fromCharCode(65 + index)})</span>
+                  {option}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="space-y-4 sm:space-y-6">
+          <div className="bg-white rounded-lg p-4 sm:p-6 text-center">
+            <div className="mb-4">
+              {getScore() >= questions.length * 0.7 ? (
+                <CheckCircle className="h-16 w-16 sm:h-12 sm:w-12 text-green-600 mx-auto mb-2" />
+              ) : (
+                <XCircle className="h-16 w-16 sm:h-12 sm:w-12 text-red-500 mx-auto mb-2" />
+              )}
+            </div>
+
+            <h4 className="text-xl sm:text-lg font-bold mb-2">
+              {getScore() >= questions.length * 0.7 ? "Parabéns!" : "Continue tentando!"}
+            </h4>
+            <p className="text-lg sm:text-base text-gray-600 mb-4">
+              Você acertou {getScore()} de {questions.length} perguntas
+            </p>
+            <p className="text-base sm:text-sm text-gray-500 mb-6">
+              {getScore() >= questions.length * 0.7
+                ? "Excelente! Você demonstrou um bom entendimento do conteúdo."
+                : "Não desanime! Revise o material e tente novamente."}
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Button
+                onClick={() => setShowCorrectAnswers(!showCorrectAnswers)}
+                variant="outline"
+                className="text-base sm:text-sm py-3 sm:py-2"
+              >
+                {showCorrectAnswers ? "Ocultar" : "Ver"} Respostas Corretas
+              </Button>
+              {canRetry && (
+                <Button
+                  onClick={resetQuiz}
+                  variant="outline"
+                  className="text-base sm:text-sm py-3 sm:py-2 bg-transparent"
+                >
+                  <RotateCcw className="h-5 w-5 sm:h-4 sm:w-4 mr-2" />
+                  Tentar Novamente
+                </Button>
+              )}
+              <Button onClick={onComplete} className="text-base sm:text-sm py-3 sm:py-2">
+                <CheckCircle className="h-5 w-5 sm:h-4 sm:w-4 mr-2" />
+                Concluir
+              </Button>
+            </div>
+          </div>
+
+          {showCorrectAnswers && (
+            <div className="bg-white rounded-lg p-4 sm:p-6">
+              <h5 className="text-lg sm:text-base font-semibold mb-4">Respostas Corretas:</h5>
+              <div className="space-y-4">
+                {questions.map((q, index) => (
+                  <div key={index} className="border-l-4 border-green-500 pl-4">
+                    <p className="font-medium text-base sm:text-sm mb-2">{q.question}</p>
+                    <p className="text-green-700 text-base sm:text-sm">
+                      <strong>Resposta:</strong> {q.options[q.correct]}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   )
 }
@@ -734,26 +799,28 @@ const MissionComponent = ({ title, onComplete }) => {
   }
 
   return (
-    <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-      <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-        <Trophy className="h-5 w-5 text-yellow-600" />
+    <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 sm:p-6">
+      <h3 className="text-lg sm:text-lg font-semibold mb-4 flex items-center gap-2">
+        <Trophy className="h-6 w-6 sm:h-5 sm:w-5 text-yellow-600" />
         {title}
       </h3>
 
-      <div className="space-y-4">
+      <div className="space-y-4 sm:space-y-4">
         <div>
-          <label className="block text-sm font-medium mb-2">Descreva sua experiência ou plano:</label>
+          <label className="block text-base sm:text-sm font-medium mb-2">Descreva sua experiência ou plano:</label>
           <textarea
             value={textInput}
             onChange={(e) => setTextInput(e.target.value)}
-            className="w-full p-3 border border-gray-300 rounded-lg resize-none"
+            className="w-full p-4 sm:p-3 border border-gray-300 rounded-lg resize-none text-base sm:text-sm"
             rows={4}
             placeholder="Compartilhe seus insights, planos ou resultados..."
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-2">Anexar arquivos (imagens, vídeos ou PDFs):</label>
+          <label className="block text-base sm:text-sm font-medium mb-2">
+            Anexar arquivos (imagens, vídeos ou PDFs):
+          </label>
           <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
             <input
               type="file"
@@ -766,28 +833,56 @@ const MissionComponent = ({ title, onComplete }) => {
             <label htmlFor="file-upload" className="cursor-pointer">
               <div className="flex flex-col items-center gap-2">
                 <div className="flex gap-2">
-                  <ImageIcon className="h-8 w-8 text-gray-400" />
-                  <Upload className="h-8 w-8 text-gray-400" />
+                  <ImageIcon className="h-10 w-10 sm:h-8 sm:w-8 text-gray-400" />
+                  <Upload className="h-10 w-10 sm:h-8 sm:w-8 text-gray-400" />
                 </div>
-                <p className="text-sm text-gray-600">Clique para selecionar arquivos ou arraste aqui</p>
-                <p className="text-xs text-gray-500">Suporta: imagens, vídeos e PDFs</p>
+                <p className="text-base sm:text-sm text-gray-600">Clique para selecionar arquivos ou arraste aqui</p>
+                <p className="text-sm sm:text-xs text-gray-500">Suporta: imagens, vídeos e PDFs</p>
               </div>
             </label>
           </div>
           {files && files.length > 0 && (
             <div className="mt-2">
-              <p className="text-sm text-green-600">{files.length} arquivo(s) selecionado(s)</p>
+              <p className="text-base sm:text-sm text-green-600">{files.length} arquivo(s) selecionado(s)</p>
             </div>
           )}
         </div>
 
-        <Button onClick={handleSubmit} disabled={!textInput.trim() && !files} className="w-full">
-          <CheckCircle className="h-4 w-4 mr-2" />
+        <Button
+          onClick={handleSubmit}
+          disabled={!textInput.trim() && !files}
+          className="w-full text-base sm:text-sm py-3 sm:py-2"
+        >
+          <CheckCircle className="h-5 w-5 sm:h-4 sm:w-4 mr-2" />
           Enviar Missão
         </Button>
       </div>
     </div>
   )
+}
+
+const getActivityIcon = (type) => {
+  const iconSize = "h-6 w-6 sm:h-5 sm:w-5"
+  switch (type) {
+    case "video":
+      return <Play className={iconSize} />
+    case "pdf":
+    case "ebook":
+      return <FileText className={iconSize} />
+    case "quiz":
+      return <HelpCircle className={iconSize} />
+    case "mission":
+      return <Trophy className={iconSize} />
+    case "cards":
+      return <Users className={iconSize} />
+    case "img":
+      return <ImageIcon className={iconSize} />
+    case "imgc":
+    case "imgcE":
+      return <BookOpen className={iconSize} />
+    default:
+      return <FileText className={iconSize} />
+  }
 }
 
 export default function LearningPathPage() {
@@ -884,7 +979,7 @@ export default function LearningPathPage() {
         <button onClick={handleDownload}>📄 Baixar {title}</button>
         {imageSrc && (
           <img
-            src={imageSrc}
+            src={imageSrc || "/placeholder.svg"}
             alt={`Download ${title}`}
             onClick={handleDownload}
             style={{ cursor: "pointer", width: "100%", marginLeft: "10px" }}
@@ -1007,7 +1102,6 @@ export default function LearningPathPage() {
     const currentVideoData = videos[currentVideo]
 
     return (
-
       <div className="bg-white rounded-lg p-6 border border-gray-200">
         <Button onClick={onComplete} className="w-full">
           <CheckCircle className="h-4 w-4 mr-2" />
@@ -1022,48 +1116,47 @@ export default function LearningPathPage() {
         </div>
 
         {/* Video Player */}
-<div className="mb-6">
-  <div className="aspect-video bg-gray-900 rounded-lg flex items-center justify-center mb-4 relative overflow-hidden">
-    {!isPlaying ? (
-      <div className="text-center text-white">
-        <Button onClick={() => setIsPlaying(true)} size="lg" className="bg-red-600 hover:bg-red-700 mb-4">
-          <Play className="h-6 w-6 mr-2" />
-          Reproduzir Vídeo
-        </Button>
-        <div className="text-sm opacity-75">Duração: {currentVideoData.duration}</div>
-      </div>
-    ) : (
-      <iframe
-        src={currentVideoData.src} // URL do Google Drive no formato /preview
-        title={currentVideoData.title}
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowFullScreen
-        className="absolute top-0 left-0 w-full h-full" // ⚡ ocupa toda a div pai
-      ></iframe>
-    )}
-  </div>
+        <div className="mb-6">
+          <div className="aspect-video bg-gray-900 rounded-lg flex items-center justify-center mb-4 relative overflow-hidden">
+            {!isPlaying ? (
+              <div className="text-center text-white">
+                <Button onClick={() => setIsPlaying(true)} size="lg" className="bg-red-600 hover:bg-red-700 mb-4">
+                  <Play className="h-6 w-6 mr-2" />
+                  Reproduzir Vídeo
+                </Button>
+                <div className="text-sm opacity-75">Duração: {currentVideoData.duration}</div>
+              </div>
+            ) : (
+              <iframe
+                src={currentVideoData.src} // URL do Google Drive no formato /preview
+                title={currentVideoData.title}
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full" // ⚡ ocupa toda a div pai
+              ></iframe>
+            )}
+          </div>
 
-  {/* Video Info */}
-  <div className="mb-4">
-    <h4 className="font-semibold text-lg mb-1">{currentVideoData.title}</h4>
-    <p className="text-gray-600 text-sm">{currentVideoData.description}</p>
-  </div>
+          {/* Video Info */}
+          <div className="mb-4">
+            <h4 className="font-semibold text-lg mb-1">{currentVideoData.title}</h4>
+            <p className="text-gray-600 text-sm">{currentVideoData.description}</p>
+          </div>
 
-  {/* Progress Indicator */}
-  <div className="flex items-center gap-2 mb-4">
-    <span className="text-sm text-gray-500">Progresso:</span>
-    <div className="flex-1 bg-gray-200 rounded-full h-2">
-      <div
-        className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-        style={{ width: `${(completedVideos.size / videos.length) * 100}%` }}
-      />
-    </div>
-    <span className="text-sm font-medium text-gray-700">
-      {completedVideos.size}/{videos.length}
-    </span>
-  </div>
-</div>
-
+          {/* Progress Indicator */}
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-sm text-gray-500">Progresso:</span>
+            <div className="flex-1 bg-gray-200 rounded-full h-2">
+              <div
+                className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                style={{ width: `${(completedVideos.size / videos.length) * 100}%` }}
+              />
+            </div>
+            <span className="text-sm font-medium text-gray-700">
+              {completedVideos.size}/{videos.length}
+            </span>
+          </div>
+        </div>
 
         {/* Navigation Controls */}
         <div className="flex items-center justify-between mb-6">
@@ -1092,63 +1185,43 @@ export default function LearningPathPage() {
           </Button>
         </div>
 
-        {/* Video Thumbnails */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-3 mb-6">
           {videos.map((video, index) => (
             <div
               key={video.id}
               onClick={() => goToVideo(index)}
-              className={`cursor-pointer rounded-lg border-2 p-3 transition-all ${index === currentVideo
-                ? "border-blue-500 bg-blue-50"
-                : "border-gray-200 hover:border-gray-300"
-                }`}
+              className={`cursor-pointer rounded-lg border-2 p-3 transition-all ${
+                index === currentVideo ? "border-blue-500 bg-blue-50" : "border-gray-200 hover:border-gray-300"
+              }`}
             >
               <div className="aspect-video w-full bg-gray-100 rounded mb-2 relative">
-                {/* Iframe responsivo */}
-                <iframe
-                  src={video.src} // URL do Vimeo ou outro embed
-                  title={video.title}
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                  className="absolute top-0 left-0 w-full h-full rounded"
-                ></iframe>
-                <div className="aspect-video w-full bg-gray-100 rounded mb-2 relative">
-                  {index === currentVideo ? (
-                    <iframe
-                      src={video.src}
-                      title={video.title}
-                      frameBorder="0"
-                      allow="autoplay; fullscreen; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full rounded"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center bg-gray-100 rounded cursor-pointer" onClick={() => goToVideo(index)}>
-                      <Play className="h-6 w-6 text-gray-400" />
-                    </div>
-                  )}
-
-                  {completedVideos.has(video.id) && (
-                    <div className="absolute top-1 right-1">
-                      <CheckCircle className="h-4 w-4 text-green-600" />
-                    </div>
-                  )}
-                </div>
-
-
-                {/* Marca de vídeo completo */}
-                {completedVideos.has(video.id) && (
-                  <div className="absolute top-1 right-1">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
+                {index === currentVideo ? (
+                  <iframe
+                    src={video.src}
+                    title={video.title}
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full rounded"
+                  />
+                ) : (
+                  <div
+                    className="absolute inset-0 flex items-center justify-center bg-gray-100 rounded cursor-pointer"
+                    onClick={() => goToVideo(index)}
+                  >
+                    <Play className="h-8 w-8 sm:h-6 sm:w-6 text-gray-400" />
                   </div>
                 )}
               </div>
-
-              <h5 className="font-medium text-sm mb-1 line-clamp-2">{video.title}</h5>
-              <p className="text-xs text-gray-500">{video.duration}</p>
+              <h5 className="font-medium text-base sm:text-xs mb-1 line-clamp-2">{video.title}</h5>
+              <p className="text-sm sm:text-xs text-gray-600 line-clamp-2">{video.description}</p>
+              {completedVideos.has(video.id) && (
+                <div className="mt-2">
+                  <CheckCircle className="h-5 w-5 sm:h-4 sm:w-4 text-green-600" />
+                </div>
+              )}
             </div>
           ))}
-
         </div>
 
         {/* Completion Status */}
@@ -1191,9 +1264,8 @@ export default function LearningPathPage() {
       { id: 18, title: "Imagem 18", description: "Descrição da imagem 18", src: img18 },
     ]
 
-
     const handleImageComplete = (imageId) => {
-      setCompletedImages(prev => {
+      setCompletedImages((prev) => {
         const newCompleted = new Set(prev)
         newCompleted.add(imageId)
         if (newCompleted.size === images.length) {
@@ -1229,7 +1301,7 @@ export default function LearningPathPage() {
         <div className="mb-6">
           <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center mb-4 relative overflow-hidden">
             <img
-              src={currentData.src}
+              src={currentData.src || "/placeholder.svg"}
               alt={currentData.title}
               className="w-full h-full object-cover rounded-lg"
               onLoad={() => handleImageComplete(currentData.id)}
@@ -1271,24 +1343,24 @@ export default function LearningPathPage() {
           </Button>
         </div>
 
-        {/* Thumbnails */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-3 mb-6">
           {images.map((img, index) => (
             <div
               key={img.id}
               onClick={() => goToImage(index)}
-              className={`cursor-pointer rounded-lg border-2 p-1 transition-all ${index === currentImage ? "border-blue-500 bg-blue-50" : "border-gray-200 hover:border-gray-300"
-                }`}
+              className={`cursor-pointer rounded-lg border-2 p-2 sm:p-1 transition-all ${
+                index === currentImage ? "border-blue-500 bg-blue-50" : "border-gray-200 hover:border-gray-300"
+              }`}
             >
-              <div className="aspect-video rounded mb-1 overflow-hidden relative">
-                <img src={img.src} alt={img.title} className="w-full h-full object-cover" />
+              <div className="aspect-video rounded mb-2 sm:mb-1 overflow-hidden relative">
+                <img src={img.src || "/placeholder.svg"} alt={img.title} className="w-full h-full object-cover" />
                 {completedImages.has(img.id) && (
                   <div className="absolute top-1 right-1">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    <CheckCircle className="h-5 w-5 sm:h-4 sm:w-4 text-green-600" />
                   </div>
                 )}
               </div>
-              <h5 className="font-medium text-xs mb-1 line-clamp-2">{img.title}</h5>
+              <h5 className="font-medium text-base sm:text-xs mb-1 line-clamp-2">{img.title}</h5>
             </div>
           ))}
         </div>
@@ -1335,10 +1407,8 @@ export default function LearningPathPage() {
 
     const images = title === "Ebook de encadeamento alimentar" ? imagesTitle1 : imagesTitle2
 
-
-
     const handleImageComplete = (imageId) => {
-      setCompletedImages(prev => {
+      setCompletedImages((prev) => {
         const newCompleted = new Set(prev)
         newCompleted.add(imageId)
         if (newCompleted.size === images.length) {
@@ -1375,13 +1445,12 @@ export default function LearningPathPage() {
         <div className="mb-6">
           <div className="aspect-[210/297] bg-gray-100 rounded-lg flex items-center justify-center mb-4 relative overflow-hidden w-[56%] mx-auto">
             <img
-              src={currentData.src}
+              src={currentData.src || "/placeholder.svg"}
               alt={currentData.title}
               className="w-full h-full object-cover rounded-lg"
               onLoad={() => handleImageComplete(currentData.id)}
             />
           </div>
-
 
           <div className="mb-4">
             <h4 className="font-semibold text-lg mb-1">{currentData.title}</h4>
@@ -1424,11 +1493,12 @@ export default function LearningPathPage() {
             <div
               key={img.id}
               onClick={() => goToImage(index)}
-              className={`cursor-pointer rounded-lg border-2 p-1 transition-all ${index === currentImage ? "border-blue-500 bg-blue-50" : "border-gray-200 hover:border-gray-300"
-                }`}
+              className={`cursor-pointer rounded-lg border-2 p-1 transition-all ${
+                index === currentImage ? "border-blue-500 bg-blue-50" : "border-gray-200 hover:border-gray-300"
+              }`}
             >
               <div className="aspect-[210/297] rounded mb-1 overflow-hidden relative">
-                <img src={img.src} alt={img.title} className="w-full h-full object-cover" />
+                <img src={img.src || "/placeholder.svg"} alt={img.title} className="w-full h-full object-cover" />
                 {completedImages.has(img.id) && (
                   <div className="absolute top-1 right-1">
                     <CheckCircle className="h-4 w-4 text-green-600" />
@@ -1510,42 +1580,48 @@ export default function LearningPathPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50 p-4 corpo">
       <nav className="menu-bar">
-        <Link to="/" className="recipe-button" style={{ textDecoration: 'none' }}>Início</Link>
-        <Link to="/games" className="recipe-button" style={{ textDecoration: 'none' }}>Jogos</Link>
+        <Link to="/" className="recipe-button" style={{ textDecoration: "none" }}>
+          Início
+        </Link>
+        <Link to="/games" className="recipe-button" style={{ textDecoration: "none" }}>
+          Jogos
+        </Link>
       </nav>
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center p-6 mx-auto my-6">
-          <h1 className="text-4xl font-bold text-white-800 mb-2">Trilha de Aprendizagem - TEAcolhe</h1>
-          <p className="text-lg text-gray-600 mb-6">
+      <div className="max-w-4xl mx-auto px-4 sm:px-0">
+        <div className="text-center p-4 sm:p-6 mx-auto my-4 sm:my-6">
+          <h1 className="text-2xl sm:text-4xl font-bold text-white-800 mb-2">Trilha de Aprendizagem - TEAcolhe</h1>
+          <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
             Capacitando pais, cuidadores e professores para compreender a seletividade alimentar no TEA
           </p>
 
-          <div className="bg-white rounded-lg shadow-lg p-6 mb-4" >
-            <div className="flex items-center justify-center gap-8 mb-4">
+          <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 mb-4">
+            <div className="flex items-center justify-center gap-4 sm:gap-8 mb-4">
               <div className="text-center">
                 <div className="flex items-center justify-center gap-2 mb-2">
-                  <Star className="h-6 w-6 text-yellow-500" />
-                  <span className="text-3xl font-bold text-gray-800">{totalScore}</span>
+                  <Star className="h-8 w-8 sm:h-6 sm:w-6 text-yellow-500" />
+                  <span className="text-2xl sm:text-3xl font-bold text-gray-800">{totalScore}</span>
                 </div>
-                <p className="text-sm text-gray-600">Pontos Totais</p>
+                <p className="text-base sm:text-sm text-gray-600">Pontos Totais</p>
               </div>
 
               <div className="text-center">
-                <Badge variant="secondary" className="text-lg px-4 py-2">
-                  <Trophy className="h-4 w-4 mr-2" />
+                <Badge variant="secondary" className="text-base sm:text-lg px-3 py-2 sm:px-4">
+                  <Trophy className="h-5 w-5 sm:h-4 sm:w-4 mr-2" />
                   {getBadgeTitle()}
                 </Badge>
               </div>
             </div>
 
             <div className="w-full">
-              <Progress value={getProgressPercentage()} className="h-3 mb-2" />
-              <p className="text-sm text-gray-600">Progresso geral: {Math.round(getProgressPercentage())}%</p>
+              <Progress value={getProgressPercentage()} className="h-4 sm:h-3 mb-2" />
+              <p className="text-base sm:text-sm text-gray-600">
+                Progresso geral: {Math.round(getProgressPercentage())}%
+              </p>
             </div>
           </div>
 
           {visibleLevels.length > 1 && (
-            <div className="bg-white rounded-lg shadow-lg p-4 mb-6" >
+            <div className="bg-white rounded-lg shadow-lg p-4 mb-4 sm:mb-6">
               <h3 className="text-lg font-semibold text-gray-800 mb-3">Navegue pelos níveis:</h3>
               <div className="flex flex-wrap gap-2 justify-center">
                 {visibleLevels.map((level) => (
@@ -1554,20 +1630,21 @@ export default function LearningPathPage() {
                     variant={viewingLevel === level.id ? "default" : "outline"}
                     size="sm"
                     onClick={() => navigateToLevel(level.id)}
-                    className={`${level.completed
-                      ? "bg-green-100 border-green-300 text-green-800 hover:bg-green-200"
-                      : viewingLevel === level.id
-                        ? "bg-blue-600 text-white"
-                        : "bg-white border-gray-300"
-                      }`}
+                    className={`text-base sm:text-sm py-3 px-4 sm:py-2 sm:px-3 ${
+                      level.completed
+                        ? "bg-green-100 border-green-300 text-green-800 hover:bg-green-200"
+                        : viewingLevel === level.id
+                          ? "bg-blue-600 text-white"
+                          : "bg-white border-gray-300"
+                    }`}
                   >
-                    {level.completed && <CheckCircle className="h-4 w-4 mr-1" />}
+                    {level.completed && <CheckCircle className="h-5 w-5 sm:h-4 sm:w-4 mr-1" />}
                     Nível {level.id}
                   </Button>
                 ))}
               </div>
               {visibleLevels.find((l) => l.id === viewingLevel)?.completed && (
-                <p className="text-sm text-green-600 mt-2 font-medium">
+                <p className="text-base sm:text-sm text-green-600 mt-2 font-medium">
                   ✨ Nível concluído! Você pode refazer as atividades sem perder pontos.
                 </p>
               )}
@@ -1575,39 +1652,43 @@ export default function LearningPathPage() {
           )}
         </div>
 
-        <div className="grid gap-6" style={{ width: "70%" }}>
+        <div className="grid gap-6">
           {currentViewingLevel && (
             <Card
               key={currentViewingLevel.id}
-              className={`transition-all duration-300 ${currentViewingLevel.unlocked
-                ? currentViewingLevel.completed
-                  ? "border-green-500 bg-green-50"
-                  : "border-blue-500 bg-blue-50"
-                : "border-gray-300 bg-gray-50 opacity-60"
-                }`}
+              className={`transition-all duration-300 ${
+                currentViewingLevel.unlocked
+                  ? currentViewingLevel.completed
+                    ? "border-green-500 bg-green-50"
+                    : "border-blue-500 bg-blue-50"
+                  : "border-gray-300 bg-gray-50 opacity-60"
+              }`}
             >
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     {currentViewingLevel.unlocked ? (
                       currentViewingLevel.completed ? (
-                        <CheckCircle className="h-8 w-8 text-green-600" />
+                        <CheckCircle className="h-10 w-10 sm:h-8 sm:w-8 text-green-600" />
                       ) : (
-                        <div className="h-8 w-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold">
+                        <div className="h-10 w-10 sm:h-8 sm:w-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold text-lg sm:text-base">
                           {currentViewingLevel.id}
                         </div>
                       )
                     ) : (
-                      <Lock className="h-8 w-8 text-gray-400" />
+                      <Lock className="h-10 w-10 sm:h-8 sm:w-8 text-gray-400" />
                     )}
                     <div>
-                      <CardTitle className="text-xl">
+                      <CardTitle className="text-lg sm:text-xl">
                         Nível {currentViewingLevel.id} - {currentViewingLevel.title}
                       </CardTitle>
                       <CardDescription className="text-base">{currentViewingLevel.description}</CardDescription>
                     </div>
                   </div>
-                  <Badge variant={currentViewingLevel.completed ? "default" : "secondary"}>
+                  <Badge
+                    variant={currentViewingLevel.completed ? "default" : "secondary"}
+                    className="text-base sm:text-sm"
+                  >
                     {currentViewingLevel.activities.filter((a) => a.completed).reduce((sum, a) => sum + a.points, 0)} /{" "}
                     {currentViewingLevel.totalPoints} pts
                   </Badge>
@@ -1615,56 +1696,35 @@ export default function LearningPathPage() {
               </CardHeader>
 
               <CardContent>
-                <div className="grid gap-3">
+                <div className="grid gap-4 sm:gap-3">
                   {currentViewingLevel.activities.map((activity) => {
                     return (
-                      <div key={activity.id} className="space-y-3">
-                        <div
-                          className={`flex items-center justify-between p-3 rounded-lg border ${activity.completed
-                            ? "bg-green-100 border-green-300"
+                      <div
+                        key={activity.id}
+                        className={`p-4 sm:p-3 rounded-lg border transition-all cursor-pointer ${
+                          activity.completed
+                            ? "border-green-300 bg-green-50"
                             : currentViewingLevel.unlocked
-                              ? "bg-white border-gray-200 hover:border-blue-300"
-                              : "bg-gray-100 border-gray-200"
-                            }`}
-                        >
+                              ? "border-gray-200 bg-white hover:border-blue-300 hover:bg-blue-50"
+                              : "border-gray-200 bg-gray-50 opacity-60 cursor-not-allowed"
+                        }`}
+                        onClick={() => currentViewingLevel.unlocked && setActiveActivity(activity)}
+                      >
+                        <div className="flex items-center justify-between">
                           <div className="flex items-center gap-3">
-                            {getIcon(activity.iconType, activity.completed ? "text-green-600" : "text-gray-600")}
+                            {getActivityIcon(activity.type)}
                             <div>
-                              <h4 className="font-medium text-gray-800">{activity.name}</h4>
-                              <p className="text-sm text-gray-600">{activity.points} pontos</p>
+                              <h4 className="font-semibold text-base sm:text-sm">{activity.title}</h4>
+                              <p className="text-sm text-gray-600">{activity.description}</p>
                             </div>
                           </div>
-
                           <div className="flex items-center gap-2">
-                            {activity.completed && <CheckCircle className="h-5 w-5 text-green-600" />}
-                            {currentViewingLevel.unlocked && (
-                              <Button
-                                size="sm"
-                                variant={activeActivity === activity.id ? "secondary" : "outline"}
-                                onClick={() =>
-                                  setActiveActivity(activeActivity === activity.id ? null : activity.id)
-                                }
-                                className={`
-                                  px-4 py-2 rounded-xl font-medium transition-all duration-300
-                                  ${activeActivity === activity.id
-                                    ? "bg-gray-800 text-white hover:bg-gray-700 shadow-md"
-                                    : activity.completed
-                                      ? "border-green-500 text-green-600 hover:bg-green-50 hover:border-green-600"
-                                      : "border-blue-500 text-blue-600 hover:bg-blue-50 hover:border-blue-600"}
-                              `}
-                              >
-                                {activeActivity === activity.id
-                                  ? "Fechar"
-                                  : activity.completed
-                                    ? "Refazer"
-                                    : "Iniciar"}
-                              </Button>
-
-                            )}
+                            <Badge variant="outline" className="text-base sm:text-xs">
+                              {activity.points} pts
+                            </Badge>
+                            {activity.completed && <CheckCircle className="h-6 w-6 sm:h-5 sm:w-5 text-green-600" />}
                           </div>
                         </div>
-
-                        {renderActivityContent(activity, currentViewingLevel.id)}
                       </div>
                     )
                   })}
@@ -1686,21 +1746,22 @@ export default function LearningPathPage() {
               </CardDescription>
             </CardHeader>
             <CardContent className="text-center">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                <Badge variant="secondary" className="p-3">
-                  <Users className="h-4 w-4 mr-2" />
+              {/* Improved mobile responsiveness for badges */}
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+                <Badge variant="secondary" className="p-3 text-base sm:text-sm">
+                  <Users className="h-5 w-5 sm:h-4 sm:w-4 mr-2" />
                   Explorador de Nutrientes
                 </Badge>
-                <Badge variant="secondary" className="p-3">
-                  <BookOpen className="h-4 w-4 mr-2" />
+                <Badge variant="secondary" className="p-3 text-base sm:text-sm">
+                  <BookOpen className="h-5 w-5 sm:h-4 sm:w-4 mr-2" />
                   Chef Afetivo
                 </Badge>
-                <Badge variant="secondary" className="p-3">
-                  <Trophy className="h-4 w-4 mr-2" />
+                <Badge variant="secondary" className="p-3 text-base sm:text-sm">
+                  <Trophy className="h-5 w-5 sm:h-4 sm:w-4 mr-2" />
                   Encadeador Mestre
                 </Badge>
-                <Badge variant="secondary" className="p-3">
-                  <Star className="h-4 w-4 mr-2" />
+                <Badge variant="secondary" className="p-3 text-base sm:text-sm">
+                  <Star className="h-5 w-5 sm:h-4 sm:w-4 mr-2" />
                   Guardião da Rotina
                 </Badge>
               </div>
