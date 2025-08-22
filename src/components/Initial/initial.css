@@ -1,0 +1,346 @@
+/* --- básico da homepage --- */
+* {
+  margin: 0;
+}
+
+.homepage {
+  background-image: url("../../assets/b.png") !important;
+  position: relative;
+  overflow: hidden;
+  background-size: 100% !important;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.5rem, 2vw, 1.5rem);
+  font-family: "Comic Sans MS", sans-serif;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Grid para os grupos de peças (quebra-cabeça) */
+.puzzle-group {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 3px;
+  width: fit-content;
+  z-index: 0;
+}
+
+/* Tamanho e estilo base das peças */
+.puzzle-piece {
+  width: clamp(50px, 8vw, 80px);
+  height: auto;
+  cursor: default;
+  opacity: 1;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* ===== POSICIONAMENTO E ANIMAÇÕES ===== */
+
+/* Top-left: 4 peças, animação descendo */
+.top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.top-left .puzzle-piece.p1 {
+  animation-name: slightDownUp;
+  animation-delay: 0s;
+}
+
+.top-left .puzzle-piece.p2 {
+  animation-name: slightDownUp;
+  animation-delay: 0.8s;
+}
+
+.top-left .puzzle-piece.p3 {
+  animation-name: slightDownUp;
+  animation-delay: 1.6s;
+}
+
+.top-left .puzzle-piece.p4 {
+  animation-name: slightDownUp;
+  animation-delay: 2.4s;
+}
+
+/* Top-right: 4 peças, animação descendo, espelhado horizontalmente */
+.top-right {
+  top: 10px;
+  right: 10px;
+  transform: scaleX(-1);
+}
+
+.top-right .puzzle-piece.p5 {
+  animation-name: slightDownUp;
+  animation-delay: 0.3s;
+}
+
+.top-right .puzzle-piece.p6 {
+  animation-name: slightDownUp;
+  animation-delay: 1.1s;
+}
+
+.top-right .puzzle-piece.p7 {
+  animation-name: slightDownUp;
+  animation-delay: 1.9s;
+}
+
+.top-right .puzzle-piece.p8 {
+  animation-name: slightDownUp;
+  animation-delay: 2.7s;
+}
+
+/* Bottom-left: 3 peças, animação subindo, espelhado verticalmente */
+.bottom-left {
+  bottom: 10px;
+  left: 10px;
+  transform: scaleY(-1);
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 3px;
+  width: fit-content;
+}
+
+.bottom-left .puzzle-piece.p9 {
+  animation-name: slightUpDown;
+  animation-delay: 0s;
+}
+
+.bottom-left .puzzle-piece.p10 {
+  animation-name: slightUpDown;
+  animation-delay: 1s;
+}
+
+.bottom-left .puzzle-piece.p11 {
+  animation-name: slightUpDown;
+  animation-delay: 2s;
+}
+
+/* Bottom-right: 4 peças, animação subindo, rotacionado 180deg */
+.bottom-right {
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(180deg);
+}
+
+.bottom-right .puzzle-piece.p12 {
+  animation-name: slightUpDown;
+  animation-delay: 0.2s;
+}
+
+.bottom-right .puzzle-piece.p13 {
+  animation-name: slightUpDown;
+  animation-delay: 1.0s;
+}
+
+.bottom-right .puzzle-piece.p14 {
+  animation-name: slightUpDown;
+  animation-delay: 1.8s;
+}
+
+.bottom-right .puzzle-piece.p15 {
+  animation-name: slightUpDown;
+  animation-delay: 2.6s;
+}
+
+
+/* ===== Animações ===== */
+
+/* Movimento suave para baixo e para cima */
+@keyframes slightDownUp {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* Movimento suave para cima e para baixo */
+@keyframes slightUpDown {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* --- restante do seu CSS --- */
+.title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.title h1 {
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  color: #2c3e50;
+  text-align: center;
+}
+
+.icon {
+  width: clamp(30px, 5vw, 50px);
+  height: auto;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.games {
+  background-color: #ffb347;
+  color: #333;
+}
+
+.videos {
+  background-color: #ff9999;
+  color: #fff;
+}
+
+.image-section {
+  background-color: #fcf9d3;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 90%;
+  display: flex;
+  flex-direction: row;
+  max-height: 60%;
+}
+
+.main-img {
+  width: 50%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+}
+
+.login-box label {
+  font-weight: bold;
+}
+
+.login-box select {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.btn-login {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #ffb347;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-login:hover {
+  transform: scale(1.05);
+  background-color: #ffa533;
+}
+
+.login-box input,
+.login-box select {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.login-box input:focus,
+.login-box select:focus {
+  outline: none;
+  border-color: #82bf2e;
+  box-shadow: 0 0 5px #82bf2e;
+}
+
+.right-section {
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+.forgot-password a {
+  font-size: 0.9rem;
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Layout responsivo para telas pequenas */
+@media (max-width: 768px) {
+  .image-section {
+    flex-direction: column;   /* empilha em vez de lado a lado */
+    align-items: center;
+    padding: 1rem;
+    max-height: none;         /* deixa o conteúdo expandir */
+  }
+
+  .main-img {
+    width: 80%;               /* aumenta a imagem no mobile */
+    margin-bottom: 1.5rem;
+  }
+
+  .right-section {
+    min-width: 100%;          /* ocupa largura total */
+    padding: 1rem;
+  }
+
+  .login-box {
+    width: 100%;              /* inputs ocupam toda a largura */
+  }
+}

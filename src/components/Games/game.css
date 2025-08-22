@@ -1,0 +1,49 @@
+.jogos-home {
+    text-align: center;
+    padding: 2rem;
+    background-color: #d3edea;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-image: url("../../assets/novoBack.png");
+    background-color: #7ed957;
+    background-size: 100%;
+}
+
+.lista-jogos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.jogo-card {
+    background-color: #fffbea;
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d47200;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.jogo-card:hover {
+    transform: scale(1.05);
+}
+
+.voltar-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #ff914d;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.voltar-btn:hover {
+    background-color: #ff7b29;
+}

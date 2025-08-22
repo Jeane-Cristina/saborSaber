@@ -1,0 +1,145 @@
+.jogo-container {
+  text-align: center;
+  background-color: #d3edea;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.menu-bar {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #f4dac2;
+  border-bottom: 2px solid #d47200;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.recipe-button {
+  background-color: #86efac;
+  color: #1e3a8a;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  transition: background-color 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+.recipe-button:hover {
+  background-color: #4ade80;
+}
+
+.area-jogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alimentos-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.alimento-card {
+  background: #fffbea;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 150px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+}
+
+.alimento-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+
+.cestas {
+  display: flex;
+  gap: 2rem;
+}
+
+.cesta {
+  width: 180px;
+  height: 180px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.saudavel {
+  background-color: #bbf7d0;
+  border: 2px dashed #16a34a;
+}
+
+.nao-saudavel {
+  background-color: #fecaca;
+  border: 2px dashed #dc2626;
+}
+
+.cesta {
+  width: 200px;
+  /* ajuste como quiser */
+  height: 200px;
+  background-size: contain;
+  /* ajusta sem cortar */
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  /* texto embaixo */
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+}
+
+/* Cesta saudável */
+.cesta.saudavel {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGYFZ-Dhs08Iia2pkpV-YCo-p8ieH7-T6jeQ&s');
+  /* caminho local da cesta saudável */
+}
+
+/* Cesta não saudável */
+.cesta.nao-saudavel {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGYFZ-Dhs08Iia2pkpV-YCo-p8ieH7-T6jeQ&s');
+  /* pode ser o mesmo ou outro */
+}
+
+.mensagem {
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.fim-jogo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0f5132;
+}
+
+.btn-reiniciar {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-reiniciar:hover {
+  background-color: #45a049;
+}
