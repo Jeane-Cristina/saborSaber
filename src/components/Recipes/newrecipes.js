@@ -5,17 +5,6 @@ import { Progress } from "./progess"
 import { Badge } from "./badge"
 import { Link } from "react-router-dom";
 import estica from '../../assets/imgestica.jpg'
-import videoApresentacao from '../../../src/videos/apresentacao.mp4'
-import video1 from '../../../src/videos/video1.mp4'
-import video2 from '../../../src/videos/video2.mp4'
-import video3 from '../../../src/videos/video3.mp4'
-import video4 from '../../../src/videos/video4.mp4'
-import video5 from '../../../src/videos/video5.mp4'
-import video6 from '../../../src/videos/video6.mp4'
-import video7 from '../../../src/videos/video7.mp4'
-import video8 from '../../../src/videos/video8.mp4'
-import video9 from '../../../src/videos/video9.mp4'
-import img1 from '../../assets/4985605433586724826.jpg'
 import img2 from '../../assets/4990109033214094757 (1).jpg'
 import img3 from '../../assets/4990109033214094757.jpg'
 import img4 from '../../assets/4990109033214094758.jpg'
@@ -98,7 +87,7 @@ const initialLevels = [
         points: 30,
         completed: false,
         iconType: "play",
-        src: videoApresentacao,
+        src: 'https://docs.google.com/videos/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/edit?usp=sharing',
       },
       {
         id: "0-2",
@@ -126,7 +115,7 @@ const initialLevels = [
         points: 40,
         completed: false,
         iconType: "play",
-        src: videoApresentacao,
+        src: 'https://docs.google.com/videos/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/edit?usp=sharing',
       },
       {
         id: "1-2",
@@ -915,63 +904,63 @@ export default function LearningPathPage() {
         id: 1,
         title: "O que não fazer na alimentação com uma criança autista seletiva?",
         description: "O que não fazer na alimentação com uma criança autista seletiva?",
-        src: video1,
+        src: 'https://docs.google.com/videos/d/1zsDmWToYWGk82M9dFPF5iLDRSrp_niJLMR6x7DKUlaQ/edit?usp=sharing',
         duration: "3:16",
       },
       {
         id: 2,
         title: "Como introduzir novos alimentos em crianças seletivas com autismo?",
         description: "Como introduzir novos alimentos em crianças seletivas com autismo?",
-        src: video2,
+        src: 'https://docs.google.com/videos/d/1BoHd049D3afskZmYYiEl251gS6C2cPpke_e-pajSxr0/edit?usp=sharing',
         duration: "3:02",
       },
       {
         id: 3,
         title: "Quais são os característicos da seletividade alimentar?",
         description: "Quais são os característicos da seletividade alimentar?",
-        src: video3,
+        src: 'https://docs.google.com/videos/d/1b9AiOxRmezSTmJzz0bGpRPCvgPmI-EC6dDD2uN34nik/edit?usp=sharing',
         duration: "0:59",
       },
       {
         id: 4,
         title: "Como organizar a rotina alimentar da criança autista seletiva?",
         description: "Como organizar a rotina alimentar da criança autista seletiva?",
-        src: video4,
+        src: "https://docs.google.com/videos/d/1nCv-lPXWSGsUTLy-JFELyDQLlMDYKCtmIpgQlMYFU5E/edit?usp=sharing",
         duration: "3:13",
       },
       {
         id: 5,
         title: "Impactos da seletividade alimentar",
         description: "Impactos da seletividade alimentar",
-        src: video5,
+        src: 'https://docs.google.com/videos/d/1w2OD84P7bGpQ3iw9p4uZXO9jZe4TLdyzutGQMPOe3Zk/edit?usp=sharing',
         duration: "1:55",
       },
       {
         id: 6,
         title: "Recursos Disponíveis",
         description: "Materiais, quizzes e atividades práticas",
-        src: video6,
+        src: 'https://docs.google.com/videos/d/1phxzbbi05WAru5UuyJSAy-BvikMLdTEO1fH2r8xDZMY/edit?usp=sharing',
         duration: "5:15",
       },
       {
         id: 7,
         title: "Por que envolver a criança nas escolhas e preparo?",
         description: "Por que envolver a criança nas escolhas e preparo?",
-        src: video7,
+        src: 'https://docs.google.com/videos/d/121Rs7E-PefkOsbHvJjg7lAlJrcOLTWIxaM3XShweqrY/edit?usp=sharing',
         duration: "2:54",
       },
       {
         id: 8,
         title: "Como identificar se uma criança é autista seletiva na alimentação?",
         description: "Como identificar se uma criança é autista seletiva na alimentação?",
-        src: video8,
+        src: 'https://docs.google.com/videos/d/1lkKJKerTArymOVP7wctMhsXeAvwGn4T3mciJQUh8gho/edit?usp=sharing',
         duration: "2:54",
       },
       {
         id: 9,
         title: "Por que a seletividade alimentar acontece com frequência em crianças autistas?",
         description: "Por que a seletividade alimentar acontece com frequência em crianças autistas?",
-        src: video9,
+        src: 'https://docs.google.com/videos/d/1Fgs5YlmSXB-WHZm2sIxMb_O3mkQIcu5g8JDnsS-FhLQ/edit?usp=sharing',
         duration: "1:28",
       },
     ]

@@ -5,7 +5,6 @@ import album from '../../../assets/ambum.jpg'
 import jogoMemoria from '../../../assets/jogomemomora.jpg'
 import quem from '../../../assets/quemsou.jpg'
 import colagem from '../../../assets/colagem.jpg'
-import videoApresentacao from '../../../videos/apresentacao.mp4'
 import quadrinho from '../../../assets/quadrinho.jpg'
 
 
@@ -46,9 +45,9 @@ export default function TrilhaAprendizagem() {
   ]
 
   const videos = [
-    { titulo: "Frutas Coloridas 🌈", url: videoApresentacao },
-    { titulo: "Vegetais Saudáveis 🥬", url: videoApresentacao },
-    { titulo: "Alimentação Divertida 🎉", url: videoApresentacao },
+    { titulo: "Frutas Coloridas 🌈", url: 'https://docs.google.com/videos/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/edit?usp=sharing' },
+    { titulo: "Vegetais Saudáveis 🥬", url: 'https://docs.google.com/videos/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/edit?usp=sharing' },
+    { titulo: "Alimentação Divertida 🎉", url: 'https://docs.google.com/videos/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/edit?usp=sharing' },
   ]
 
   useEffect(() => {
@@ -381,7 +380,7 @@ export default function TrilhaAprendizagem() {
         </div>
 
         <div className="secao-apresentacao">
-          <video src={videoApresentacao} controls className="video-apresentacao" />
+          <video src="https://docs.google.com/videos/d/1ZCe_Utl9AMowQiO_418ntGhX1qWQVcQCX5z0gcwozzU/edit?usp=sharing" controls className="video-apresentacao" />
           <img src={quadrinho} alt="Imagem de apoio" className="imagem-apresentacao" />
         </div>
 
