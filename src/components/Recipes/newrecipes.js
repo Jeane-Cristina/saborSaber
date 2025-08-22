@@ -1107,18 +1107,33 @@ export default function LearningPathPage() {
                 <iframe
                   src={video.src} // URL do Vimeo ou outro embed
                   title={video.title}
-                  frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowFullScreen
                   className="absolute top-0 left-0 w-full h-full rounded"
                 ></iframe>
+                <div className="aspect-video w-full bg-gray-100 rounded mb-2 relative">
+                  {index === currentVideo ? (
+                    <iframe
+                      src={video.src}
+                      title={video.title}
+                      frameBorder="0"
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full rounded"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center bg-gray-100 rounded cursor-pointer" onClick={() => goToVideo(index)}>
+                      <Play className="h-6 w-6 text-gray-400" />
+                    </div>
+                  )}
 
-                {/* Ícone de play só se quiser sobrepor */}
-                {index !== currentVideo && (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Play className="h-6 w-6 text-gray-400" />
-                  </div>
-                )}
+                  {completedVideos.has(video.id) && (
+                    <div className="absolute top-1 right-1">
+                      <CheckCircle className="h-4 w-4 text-green-600" />
+                    </div>
+                  )}
+                </div>
+
 
                 {/* Marca de vídeo completo */}
                 {completedVideos.has(video.id) && (
